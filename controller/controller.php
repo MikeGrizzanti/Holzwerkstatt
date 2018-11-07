@@ -9,17 +9,29 @@ class controller {
         $this->generatePage($action);
     }
     
-    public function home() {
-        $this->addContext("template", "home");
+    public function home_DE () {
+        $this->addContext("template", "home_de");
     }
     
-    public function contact() {
-        $this->addContext("template", "contact");
+    public function contact_DE () {
+        $this->addContext("template", "kontakt_de");
+    }
+    
+    public function dieTischlerei_DE () {
+        $this->addContext("template", "die_Tischlerei_de");
+    }
+    
+    public function planung3D_DE () {
+        $this->addContext("template", "3d_planung_de");
+    }
+    
+    public function referenzen_DE () {
+        $this->addContext("template", "referenzen_de");    
     }
     
     private function generatePage($template){
         extract($this->context);
-        require_once 'view/'.$template.".tpl.html";
+        require_once 'view/de'.$template.".tpl.html";
     }
     
     private function addContext($key, $value) {
